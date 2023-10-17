@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { ButtonModule } from 'primeng/button';
 import { SidebarModule } from 'primeng/sidebar';
+import { InputTextModule } from 'primeng/inputtext';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faBell, faMagnifyingGlass, faTicket } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    
     ButtonModule,
     SidebarModule,
+    InputTextModule,
     
     FontAwesomeModule
 
@@ -28,7 +33,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export class CoreModule { 
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faBars)
+    library.addIcons(faBars, faBell, faMagnifyingGlass, faTicket)
   }
   
 }

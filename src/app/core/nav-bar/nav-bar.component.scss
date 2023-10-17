@@ -3,11 +3,23 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 0 7.2vw;
-    height: 5rem;
+    padding: 0 8vw;
+    height: 6rem;
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+
+        &__icon {
+            font-size: 1.8rem;
+        }
+    }
 
 }
 
@@ -15,13 +27,54 @@
 .button-menu {
     
     &__icon {
-        font-size: 2.5rem;
-    
+        font-size: 2.8rem;
     }
 }
+
+.ticket-quick-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    line-height: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+
+    input {
+        height: 3rem;
+        width: 20rem;
+        font-size: 1.5rem;
+        background-color: var(--surface-50);
+        border: none;
+        
+        &:focus {
+            outline: none;
+            
+        }
+    }
+}
+
 
 //side-menu
 :host ::ng-deep .p-sidebar {
     background-color: var(--surface-100);
     width: 30rem;
+
+    &-header {
+        padding: 2rem;
+        justify-content: end;
+    }
+
+    .p-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+
+}
+
+//bars icon
+:host ::ng-deep .fa-bars > path {
+    fill: var(--surface-800);
+    background-color: transparent;
 }

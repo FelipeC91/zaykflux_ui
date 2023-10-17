@@ -2,23 +2,23 @@
     <button pButton class="button-menu" (click)="showSideBar = true">
         <fa-icon icon="bars" class="button-menu__icon"></fa-icon>
     </button>
+
+    <div class="navbar-container">
+        <ng-form class="ticket-quick-form" [ngStyle]="{'background-color': showTicketSearch === true ? 'var(--surface-50)' : ''}">
+            <input type="text" placeholder="Insira o número do ticket" name="ticketNumber" ngModel *ngIf="showTicketSearch"/>
+
+            <button pButton (click)="toggleTicketSearch()">
+                <fa-icon icon="magnifying-glass" class="navbar-container__icon" (blur)="toggleTicketSearch()"></fa-icon>
+            </button>
+        </ng-form>
+
+        <button pButton>
+            <fa-icon icon="bell" class="navbar-container__icon"></fa-icon>
+        </button>
+
+    </div>
 </nav>
 
 <p-sidebar [(visible)]="showSideBar" position="left" class="side-menu">
-    <div >
-        <div class="sidebar__header">
-            <h3 class="h3">Administrador</h3>
-        </div>
-            <ul class="sidebar__body">
-                <li>
-                    <a href="">Lançamentos</a>
-                </li>
-                <li>
-                    <a href="">Pessoas</a>
-                </li>
-                <li>
-                    <a href="">Logout</a>
-                </li>
-            </ul>
-        </div>
+
 </p-sidebar>

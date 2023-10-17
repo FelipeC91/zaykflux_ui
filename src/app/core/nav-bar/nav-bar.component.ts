@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent {
-
   showSideBar = false;
+  showTicketSearch = false;
 
+
+  ticketNumber?: number ;
+
+  toggleTicketSearch() {
+  this.showTicketSearch = this.showTicketSearch == true  ? false : true;
+  }
 
 }
