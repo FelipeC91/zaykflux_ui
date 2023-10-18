@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -11,10 +11,19 @@ export class NavBarComponent {
   showTicketSearch = false;
 
 
-  ticketNumber?: number ;
+  ticketNumber?: number;
 
-  toggleTicketSearch() {
-  this.showTicketSearch = this.showTicketSearch == true  ? false : true;
+
+  toggleTicketSearch(ticketNumberInput: ElementRef) {
+    if(!this.showTicketSearch ) {
+      this.showTicketSearch = true;
+
+      ticketNumberInput.nativeElement.focus();
+    } else {
+      this.showTicketSearch = false;
+    }
+
+
   }
 
 }

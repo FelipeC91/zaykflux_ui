@@ -30,6 +30,10 @@ body {
 
 }
 
+*:focus {
+  box-shadow: none;
+}
+
 button {
   border: none;
   margin: 0;

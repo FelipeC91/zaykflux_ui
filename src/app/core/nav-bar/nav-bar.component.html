@@ -5,10 +5,10 @@
 
     <div class="navbar-container">
         <ng-form class="ticket-quick-form" [ngStyle]="{'background-color': showTicketSearch === true ? 'var(--surface-50)' : ''}">
-            <input type="text" placeholder="Insira o número do ticket" name="ticketNumber" ngModel *ngIf="showTicketSearch"/>
+            <input type="text" placeholder="Insira o número do ticket" #ticketNumberInput name="ticketNumber" ngModel *ngIf="showTicketSearch"/>
 
-            <button pButton (click)="toggleTicketSearch()">
-                <fa-icon icon="magnifying-glass" class="navbar-container__icon" (blur)="toggleTicketSearch()"></fa-icon>
+            <button pButton (click)="toggleTicketSearch(ticketNumberInput)">
+                <fa-icon icon="magnifying-glass" class="navbar-container__icon"></fa-icon>
             </button>
         </ng-form>
 
