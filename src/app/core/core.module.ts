@@ -9,7 +9,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { InputTextModule } from 'primeng/inputtext';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBars, faBell, faMagnifyingGlass, faTicket } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faBell, faMagnifyingGlass, faPlus, faChartLine, faTicket, faUserTie, faChartSimple, faBookOpenReader } from '@fortawesome/free-solid-svg-icons';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { faBars, faBell, faMagnifyingGlass, faTicket } from '@fortawesome/free-s
   imports: [
     CommonModule,
     FormsModule,
-    
+
     ButtonModule,
     SidebarModule,
     InputTextModule,
@@ -33,7 +33,7 @@ import { faBars, faBell, faMagnifyingGlass, faTicket } from '@fortawesome/free-s
 export class CoreModule { 
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faBars, faBell, faMagnifyingGlass, faTicket)
+    library.addIcons(faBars, faBell, faMagnifyingGlass, faPlus, faChartLine, faTicket, faUserTie, faChartSimple, faBookOpenReader )
   }
   
 }

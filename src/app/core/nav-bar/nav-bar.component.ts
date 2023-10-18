@@ -13,17 +13,23 @@ export class NavBarComponent {
 
   ticketNumber?: number;
 
-
-  toggleTicketSearch(ticketNumberInput: ElementRef) {
-    if(!this.showTicketSearch ) {
-      this.showTicketSearch = true;
-
-      ticketNumberInput.nativeElement.focus();
-    } else {
+  toggleTicketSearch(ticketNumberInput: HTMLElement) {
+    if(this.showTicketSearch) {
       this.showTicketSearch = false;
+      ticketNumberInput.hidden = true;
+      
+    } else {
+      this.showTicketSearch = true;
+      ticketNumberInput.hidden = false;
+      ticketNumberInput.focus();
     }
 
 
+  }
+
+  onticketNumberInputLeave(ticketNumberInput: HTMLInputElement) {
+    ticketNumberInput.value = '';
+    this.toggleTicketSearch(ticketNumberInput)
   }
 
 }

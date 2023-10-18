@@ -13,7 +13,7 @@
     &-container {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
 
 
         &__icon {
@@ -46,7 +46,7 @@
         font-size: 1.5rem;
         background-color: var(--surface-50);
         border: none;
-
+ 
         
         &:focus {
             outline: none;
@@ -77,4 +77,11 @@
 :host ::ng-deep .fa-bars > path {
     fill: var(--surface-800);
     background-color: transparent;
+}
+
+
+.sidebar__btn-contaier {
+        display: flex;
+        justify-content: center;
+        margin: 2rem auto;
 }
