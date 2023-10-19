@@ -65,8 +65,8 @@ button {
   color: var(--surface-500);
   text-shadow: 0 -1px 0 rgba(0,0,0,.12);
   background-color: var(--orange-600);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: inherit;
+  font-weight: normal;
   text-decoration: none;
   text-align: center;
   color: #fff;
@@ -83,6 +83,10 @@ button {
 .btn:hover {
   filter: brightness(90%);
   transition-duration: .3s;
+}
+
+:host ::ng-deep .fa-bars.navbar-container__icon--watermark > path  {
+  fill: var(--orange-700);
 }
 
 .container {
