@@ -47,12 +47,17 @@
     top: -41px;
     transition-delay: .2s;
     transition-duration: 1s;
+
+}
+.navbar__btn:hover {
+    transform: scale(1.1);
 }
 
 .button-menu {
     
     &__icon {
         font-size: 2.8rem;
+
     }
 }
 
@@ -71,11 +76,15 @@
         font-size: 1.5rem;
         background-color: var(--surface-50);
         border: none;
+
+        
  
         
         &:focus {
             outline: none;
         }
+
+        
     }
 }
 

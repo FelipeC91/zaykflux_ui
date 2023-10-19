@@ -1,5 +1,5 @@
 <nav class="navbar" >
-    <button pButton class="button-menu" (click)="showSideBar = true">
+    <button pButton class="button-menu navbar__btn" (click)="showSideBar = true">
         <fa-icon icon="bars" class="button-menu__icon"></fa-icon>
     </button>
 
@@ -7,12 +7,12 @@
         <ng-form class="ticket-quick-form" [ngStyle]="{'background-color': showTicketSearch ? 'var(--surface-50)' : ''}">
             <input type="text" placeholder="Insira o número do ticket"  name="ticketNumber" hidden #ticketNumberInput ngModel (blur)="onticketNumberInputLeave(ticketNumberInput)"/>
             
-            <button pButton (click)="toggleTicketSearch(ticketNumberInput)">
+            <button pButton (click)="toggleTicketSearch(ticketNumberInput)" class="navbar__btn">
                 <fa-icon icon="magnifying-glass" class="navbar-container__icon"></fa-icon>
             </button>
         </ng-form>
 
-        <button pButton>
+        <button pButton  class="navbar__btn">
             <fa-icon icon="bell" class="navbar-container__icon"></fa-icon>
         </button>
        
@@ -27,37 +27,38 @@
                 <li class="sidebar-list__item">
                     <a pButton href="#" class="btn">
                         <fa-icon icon="plus" class="navbar-container__icon z-index-base" style="margin-right: 1.2rem;"></fa-icon>
+
                         <fa-icon icon="ticket" class="navbar-container__icon--watermark"></fa-icon>
      
                         <span class="z-index-base">Abrir novo ticket</span>
                     </a>
                 </li>
                 <li class="sidebar-list__item">
-                    <a href="" class="sidebar-navigation-link">
+                    <a href="#" class="sidebar-navigation-link">
                         <fa-icon icon="chart-line"></fa-icon>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li class="sidebar-list__item">
-                    <a href="" class="sidebar-navigation-link">
+                    <a href="#" class="sidebar-navigation-link">
                         <fa-icon icon="ticket"></fa-icon>
                         <span>Tickets</span>
                     </a>
                 </li>
                 <li class="sidebar-list__item">
-                    <a href="" class="sidebar-navigation-link">
+                    <a href="#" class="sidebar-navigation-link">
                         <fa-icon icon="user-tie"></fa-icon>
                         <span>Clientes</span>
                     </a>
                 </li>
                 <li class="sidebar-list__item">
-                    <a href="" class="sidebar-navigation-link">
+                    <a href="#" class="sidebar-navigation-link">
                         <fa-icon icon="chart-simple"></fa-icon>
                         <span>Relatórios</span>
                     </a>
                 </li>
                 <li class="sidebar-list__item">
-                    <a href="" class="sidebar-navigation-link">
+                    <a href="#" class="sidebar-navigation-link">
                         <fa-icon icon="book-open-reader"></fa-icon>
                         <span>Conhecimentos</span>
                     </a>
@@ -67,13 +68,13 @@
         <section  class="sidebar__section"> 
             <ul class="sidebar-list">
                 <li class="sidebar-list__item">
-                    <a href="" class="sidebar-navigation-link">
+                    <a href="#" class="sidebar-navigation-link">
                         <fa-icon icon="id-card"></fa-icon>
                         <span>nome do usuário</span>
                     </a>
                 </li>
                 <li class="sidebar-list__item">
-                    <a href="" class="sidebar-navigation-link">
+                    <a href="#" class="sidebar-navigation-link">
                         <fa-icon icon="gears"></fa-icon>
                         <span>Configurações</span>
                     </a>

@@ -6,6 +6,7 @@
 :root {
   font-family: var(--font-family);
   text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+  color: var(--surface-800);
 }
 
 * {
@@ -85,9 +86,6 @@ button {
   transition-duration: .3s;
 }
 
-:host ::ng-deep .fa-bars.navbar-container__icon--watermark > path  {
-  fill: var(--orange-700);
-}
 
 .container {
   max-width: 120rem;
