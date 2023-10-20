@@ -79,12 +79,18 @@ button {
   bottom: none;
   cursor: pointer;
   transition: all 0.3s;
+
+        &:hover {
+          filter: brightness(90%);
+
+          transition-duration: .3s;
+        }
+
+        &:active {
+          transform: translateY(1px);
+        }
 }
 
-.btn:hover {
-  filter: brightness(90%);
-  transition-duration: .3s;
-}
 
 
 .container {
