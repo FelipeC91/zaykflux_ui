@@ -32,4 +32,5 @@ export class NavBarComponent {
     this.toggleTicketSearch(ticketNumberInput)
   }
 
+
 }

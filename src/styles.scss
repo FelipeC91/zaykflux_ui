@@ -14,14 +14,15 @@
   margin: 0; 
   padding: 0;
   text-decoration: none;
+
+  &:focus {
+    outline: none;
+    /* overflow: 4px dotted #e67e22; */
+    /* outline-offset: 8px; */
+    box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.05);
+  }
 }
 
-*:focus {
-  outline: none;
-  /* overflow: 4px dotted #e67e22; */
-  /* outline-offset: 8px; */
-  box-shadow: 0 0 0 0.8rem rgba(230, 126, 34, 0.05);
-}
 
 html {
 
@@ -65,7 +66,7 @@ button {
   display: inline-block;
   color: var(--surface-500);
   text-shadow: 0 -1px 0 rgba(0,0,0,.12);
-  background-color: var(--orange-600);
+  background-color: var(--orange-600); // #fe5000
   font-size: inherit;
   font-weight: normal;
   text-decoration: none;

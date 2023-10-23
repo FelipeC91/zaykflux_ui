@@ -5,18 +5,21 @@
 
     <div class="navbar-container">
         <ng-form class="ticket-quick-form" [ngStyle]="{'background-color': showTicketSearch ? 'var(--surface-50)' : ''}">
-            <input type="text" placeholder="Insira o número do ticket"  name="ticketNumber" hidden #ticketNumberInput ngModel (blur)="onticketNumberInputLeave(ticketNumberInput)"/>
+            <input type="text" placeholder="Insira o número do ticket"  name="ticketNumber"
+                 hidden #ticketNumberInput ngModel (blur)="onticketNumberInputLeave(ticketNumberInput)"/>
             
             <button pButton (click)="toggleTicketSearch(ticketNumberInput)" class="navbar__btn">
                 <fa-icon icon="magnifying-glass" class="navbar-container__icon"></fa-icon>
             </button>
         </ng-form>
 
-        <button pButton  class="navbar__btn">
+        <button pButton  class="navbar__btn" (click)="messageViwer.toggle($event)">
             <fa-icon icon="bell" class="navbar-container__icon"></fa-icon>
         </button>
        
-
+        <p-overlayPanel #messageViwer>
+            test
+        </p-overlayPanel>
     </div>
 </nav>
 
